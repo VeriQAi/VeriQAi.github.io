@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VeriQAI — Accessible STEM, proven · EM Reader exemplar</title>
+<meta name="description" content="A scanned, equation-dense electromagnetics chapter, rebuilt as a certified accessible HTML + MathML edition — mathematics spoken and explorable by a screen reader, built from the image-only PDF and proven 100% faithful to the source.">
+<style>
+  /* --- Brand hooks: change --accent (and the wordmark text below) to rebrand --- */
+  :root{
+    --ink:#16202b; --muted:#54606b; --bg:#ffffff; --panel:#f6f8fa; --rule:#e2e8ee;
+    --accent:#0b5cad; --accent-ink:#08386b; --good:#1e8449; --bad:#c0392b;
+    --maxw:64rem;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;color:var(--ink);background:var(--bg);
+    font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6;font-size:17px}
+  a{color:var(--accent)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 1.25rem}
+  header.site{border-bottom:1px solid var(--rule)}
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.25rem}
+  .brand{font-weight:800;letter-spacing:-.01em;font-size:1.15rem;color:var(--ink)}
+  .brand span{color:var(--accent)}
+  .brand small{display:block;font-weight:500;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .hero{padding:3rem 0 1.5rem}
+  .kicker{font-size:.8rem;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-ink);font-weight:700;margin:0 0 .6rem}
+  h1{font-size:2.35rem;line-height:1.12;letter-spacing:-.02em;margin:.2rem 0 .8rem;max-width:20ch}
+  .lede{font-size:1.2rem;color:var(--muted);max-width:60ch;margin:0 0 1.6rem}
+  .cta{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:#fff;text-decoration:none;
+    font-weight:700;padding:.8rem 1.3rem;border-radius:9px;font-size:1.05rem}
+  .cta:hover{background:var(--accent-ink)}
+  .cta.secondary{background:#fff;color:var(--accent);border:1.5px solid var(--accent);margin-left:.6rem}
+  figure{margin:2.4rem 0}
+  figure img{width:100%;height:auto;border:1px solid var(--rule);border-radius:10px;display:block}
+  figcaption{color:var(--muted);font-size:.92rem;margin-top:.6rem}
+  section{padding:2rem 0;border-top:1px solid var(--rule)}
+  h2{font-size:1.5rem;letter-spacing:-.01em;margin:.2rem 0 1rem}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.8rem}
+  .stat{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:1rem}
+  .stat b{display:block;font-size:1.7rem;letter-spacing:-.02em;color:var(--accent-ink);line-height:1.1}
+  .stat span{font-size:.9rem;color:var(--muted)}
+  .audio{background:var(--panel);border:1px solid var(--rule);border-radius:10px;padding:1.1rem 1.2rem}
+  audio{width:100%;margin:.4rem 0}
+  .note{font-size:.9rem;color:var(--muted)}
+  .pending{border-left:4px solid var(--accent);background:#eef4fb;border-radius:0 8px 8px 0;padding:.8rem 1rem;font-size:.95rem}
+  ul.clean{padding-left:1.1rem;margin:.4rem 0}
+  ul.clean li{margin:.35rem 0}
+  footer.site{border-top:1px solid var(--rule);color:var(--muted);font-size:.9rem;padding:2rem 0 3rem}
+  footer.site .wrap{padding-top:0}
+  .honest{font-size:.92rem;color:var(--muted);max-width:70ch}
+  @media(max-width:640px){ h1{font-size:1.8rem} .hero{padding:2rem 0 1rem} .cta.secondary{margin-left:0;margin-top:.6rem} }
+</style>
+</head>
+<body>
+
+<!-- ============ BRAND HEADER (swap wordmark / drop a logo <img> here on rebrand) ============ -->
+<header class="site">
+  <div class="wrap">
+    <div class="brand">Veri<span>QAI</span><small>Accessible STEM, proven</small></div>
+    <a class="cta" href="accessible-edition.html">Open the accessible edition &rarr;</a>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <section class="hero" style="border-top:0">
+    <p class="kicker">Flagship exemplar</p>
+    <h1>Equation‑dense STEM, made truly accessible.</h1>
+    <p class="lede">A scanned electromagnetics chapter has its mathematics trapped in images — a screen reader gets noise, not "the complex propagation constant equals omega root mu‑epsilon." Here is the same chapter as a <strong>certified accessible HTML&nbsp;+&nbsp;MathML edition</strong>: the math <strong>spoken and explorable</strong> by a screen reader — built from the image‑only PDF, and proven <strong>100% faithful</strong> to the source.</p>
+    <a class="cta" href="accessible-edition.html">Open the accessible edition &rarr;</a>
+    <a class="cta secondary" href="QA-provenance-one-pager-SIGNED.pdf">See the QA &amp; provenance (signed)</a>
+  </section>
+
+  <figure>
+    <img src="before_after_still.png" alt="Side-by-side comparison. Left, labeled BEFORE, image-only PDF: the four vector Maxwell equations 2.79 to 2.82 as a scanned picture a screen reader cannot read. Right, labeled AFTER, accessible edition: the same four equations as live MathML that a screen reader speaks aloud.">
+    <figcaption>The same four equations (Maxwell's equations in a lossy medium, 2.79–2.82): trapped as pixels in the scanned PDF (left), and rebuilt as live, spoken MathML (right).</figcaption>
+  </figure>
+
+  <section>
+    <h2>What the exemplar proves</h2>
+    <div class="stats">
+      <div class="stat"><b>0</b><span>extractable characters in the source — a genuine image‑only PDF</span></div>
+      <div class="stat"><b>100%</b><span>fidelity: 30/30 equations character‑exact vs. the author's LaTeX</span></div>
+      <div class="stat"><b>0</b><span>WCAG&nbsp;2.1&nbsp;AA violations (axe); contrast measured, all pass</span></div>
+      <div class="stat"><b>109</b><span>expressions rendered as real MathML — spoken &amp; explorable</span></div>
+      <div class="stat"><b>Signed</b><span>named author fidelity review &amp; sign‑off</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Hear the math</h2>
+    <div class="audio">
+      <audio controls preload="none" src="equations-read-aloud.mp3">Your browser doesn't support audio playback.</audio>
+      <p class="note"><strong>Audio rendering</strong> — the equations read aloud in a screen‑reader‑style voice (neural TTS), so you can hear what the accessible math sounds like. This is an illustrative narration, <em>not</em> a live screen‑reader capture.</p>
+    </div>
+    <div class="pending" style="margin-top:1rem">
+      <strong>Coming:</strong> a live recording of a blind screen‑reader user reading the edition and exploring an equation term by term — the strongest proof of real‑world accessibility, validated by a native screen‑reader user.
+    </div>
+  </section>
+
+  <section>
+    <h2>How it was made</h2>
+    <ul class="clean">
+      <li><strong>From the image‑only PDF, not the source.</strong> The pages were rasterized to images (no text layer) and the mathematics transcribed from those images into real MathML — the same source‑less path a real scanned client text requires.</li>
+      <li><strong>Verified against ground truth.</strong> The image‑derived transcription was then checked against the author's original LaTeX and matched 100%, character‑for‑character.</li>
+      <li><strong>Documented, human‑reviewed, gated.</strong> Every step produces a checkable output; ambiguities were surfaced for the author, not silently guessed; the author signed off. It is not a black box.</li>
+      <li><strong>Spoken by real assistive tech.</strong> The math is real MathML rendered with MathJax and a speech engine, so NVDA&nbsp;+&nbsp;MathCAT (Windows) and VoiceOver (macOS) read and navigate every equation.</li>
+    </ul>
+    <p class="honest">The material is the author's own work, reproduced with permission and freely shareable. This edition describes a documented, human‑reviewed conversion process and makes no compliance guarantee.</p>
+  </section>
+
+</div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p>VeriQAI · EM Reader accessible‑edition exemplar. Source: <em>Fundamentals of Electromagnetic Waves</em>, §2.6.4–2.6.5, by Andre Knoesen, reproduced by the author.</p>
+  </div>
+</footer>
+
+</body>
+</html>
