@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VeriQAI — Accessible STEM, proven · EM Reader exemplar</title>
-<meta name="description" content="A scanned, equation-dense electromagnetics chapter, rebuilt as a verified accessible HTML + MathML edition: mathematics spoken and explorable by a screen reader, built from the image-only PDF and proven 100% faithful to the source.">
+<meta name="description" content="A scanned, equation-dense electromagnetics chapter, rebuilt as a verified accessible HTML + MathML edition: mathematics spoken and explorable by a screen reader, built from the image-only PDF and author-verified faithful to the source, expression by expression.">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="veriqai-mark.png">
 <style>
@@ -74,7 +74,7 @@
   <section class="hero" style="border-top:0">
     <p class="kicker">Flagship exemplar</p>
     <h1>Equation‑dense STEM, made truly accessible.</h1>
-    <p class="lede">A scanned electromagnetics chapter has its mathematics trapped in images. A screen reader gets noise, not "the complex propagation constant equals omega root mu‑epsilon." Here is the same chapter as a <strong>verified accessible HTML&nbsp;+&nbsp;MathML edition</strong>: the math <strong>spoken and explorable</strong> by a screen reader, built from the image‑only PDF and proven <strong>100% faithful</strong> to the source.</p>
+    <p class="lede">A scanned electromagnetics chapter has its mathematics trapped in images. A screen reader gets noise, not "the complex propagation constant equals omega root mu‑epsilon." Here is the same chapter as a <strong>verified accessible HTML&nbsp;+&nbsp;MathML edition</strong>: the math <strong>spoken and explorable</strong> by a screen reader, built from the image‑only PDF and <strong>author‑verified faithful</strong> to the source, <strong>expression by expression</strong>.</p>
     <a class="cta" href="accessible-edition.html">Open the accessible edition &rarr;</a>
     <a class="cta secondary" href="QA-provenance-one-pager-SIGNED.pdf">See the QA &amp; provenance (signed)</a>
     <p class="lede" style="font-size:1.02rem;margin-top:1.4rem">This is for the print‑disabled reader in an equation‑dense course who needs the mathematics now: correct, navigable, and read aloud. Not a scanned image, and not a months‑long wait for an accessible edition that may never arrive.</p>
@@ -88,8 +88,7 @@
   <section>
     <h2>Why this is hard, and why a tool won't do it</h2>
     <p>Making equation‑dense STEM accessible isn't a conversion job you can hand to software. General PDF‑remediation tools tag headings and reading order but leave every equation as an image, so the math stays unreadable. Automated math conversion (LaTeXML on clean source, OCR‑to‑MathML on scans) gets most of the way there. Most of the way isn't the bar.</p>
-    <p>Even the newest standard doesn't close it. In 2026 the PDF ecosystem gained a way to embed real MathML in tagged PDFs, but as of today it doesn't reach the reader reliably: the accessibility checkers flag the new tags instead of recognizing them, and screen-reader support is partial and inconsistent. Even the LaTeX tagging community's own testing hasn't shown it working end to end. A capability on paper is not a capability a student can use.</p>
-    <!-- Source: PDF Association MathML-in-PDF / PDF/UA-2 (2026). Real-toolchain gaps discussed in the LaTeX Project tagging-project GitHub discussion #1130 (macOS-only: VoiceOver inconsistent, Acrobat + Ally choke; author could NOT test Windows/JAWS/NVDA). TIME-BOUNDED claim: recheck as tools evolve; update or remove if it changes. -->
+    <p>The newest standard now exists. Embedding real MathML in a tagged PDF (PDF/UA-2, 2024) is fully specified. But the mainstream PDF toolchain, the tools people actually author and check with, does not yet deliver it. Adobe's auto-tagging conveys no math, the mainstream accessibility checkers do not validate math at all (a broken file can still score 100), and the paths that do work are narrow, current-version, and mostly Windows. A capability on paper is not a capability a student can use. (As tested in 2026; we re-check as tools change.)</p>
     <p>In accessibility, <strong>90% correct is a failure</strong>. It means one equation in ten is wrong, and a reader who can't see the original page has no way to catch a dropped subscript or a flipped sign. A plausible‑but‑wrong equation is worse than no equation at all: it's the wrong result, delivered with confidence.</p>
     <p>The real challenge isn't converting one clean equation. It's getting an entire source‑less book right, at a standard where near‑miss fails, and being able to <strong>prove</strong> it. That's what this exemplar demonstrates.</p>
   </section>
