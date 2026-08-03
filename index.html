@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VeriQAI — Accessible STEM, proven · EM Reader exemplar</title>
-<meta name="description" content="A scanned, equation-dense electromagnetics chapter, rebuilt as a certified accessible HTML + MathML edition — mathematics spoken and explorable by a screen reader, built from the image-only PDF and proven 100% faithful to the source.">
+<meta name="description" content="A scanned, equation-dense electromagnetics chapter, rebuilt as a verified accessible HTML + MathML edition: mathematics spoken and explorable by a screen reader, built from the image-only PDF and proven 100% faithful to the source.">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="veriqai-mark.png">
 <style>
@@ -74,9 +74,10 @@
   <section class="hero" style="border-top:0">
     <p class="kicker">Flagship exemplar</p>
     <h1>Equation‑dense STEM, made truly accessible.</h1>
-    <p class="lede">A scanned electromagnetics chapter has its mathematics trapped in images — a screen reader gets noise, not "the complex propagation constant equals omega root mu‑epsilon." Here is the same chapter as a <strong>certified accessible HTML&nbsp;+&nbsp;MathML edition</strong>: the math <strong>spoken and explorable</strong> by a screen reader — built from the image‑only PDF, and proven <strong>100% faithful</strong> to the source.</p>
+    <p class="lede">A scanned electromagnetics chapter has its mathematics trapped in images. A screen reader gets noise, not "the complex propagation constant equals omega root mu‑epsilon." Here is the same chapter as a <strong>verified accessible HTML&nbsp;+&nbsp;MathML edition</strong>: the math <strong>spoken and explorable</strong> by a screen reader, built from the image‑only PDF and proven <strong>100% faithful</strong> to the source.</p>
     <a class="cta" href="accessible-edition.html">Open the accessible edition &rarr;</a>
     <a class="cta secondary" href="QA-provenance-one-pager-SIGNED.pdf">See the QA &amp; provenance (signed)</a>
+    <p class="lede" style="font-size:1.02rem;margin-top:1.4rem">This is for the print‑disabled reader in an equation‑dense course who needs the mathematics now: correct, navigable, and read aloud. Not a scanned image, and not a months‑long wait for an accessible edition that may never arrive.</p>
   </section>
 
   <figure>
@@ -87,36 +88,39 @@
   <section>
     <h2>Why this is hard, and why a tool won't do it</h2>
     <p>Making equation‑dense STEM accessible isn't a conversion job you can hand to software. General PDF‑remediation tools tag headings and reading order but leave every equation as an image, so the math stays unreadable. Automated math conversion (LaTeXML on clean source, OCR‑to‑MathML on scans) gets most of the way there. Most of the way isn't the bar.</p>
+    <p>Even the newest standard doesn't close it. In 2026 the PDF ecosystem gained a way to embed real MathML in tagged PDFs, but as of today it doesn't reach the reader: Acrobat and the common accessibility checkers don't recognize the new tags, and JAWS can't read MathML in a PDF at all. A capability on paper is not a capability a student can use.</p>
+    <!-- Source: PDF Association MathML-in-PDF / PDF/UA-2 (2026). Real-toolchain failure documented in Strategy/Feasibility-Study-STEM-Text-Conversion.md, citing the LaTeX Project tagging-project GitHub discussions. TIME-BOUNDED claim ("as of today", "in 2026"): recheck as Acrobat/JAWS support evolves; update or remove if it changes. -->
     <p>In accessibility, <strong>90% correct is a failure</strong>. It means one equation in ten is wrong, and a reader who can't see the original page has no way to catch a dropped subscript or a flipped sign. A plausible‑but‑wrong equation is worse than no equation at all: it's the wrong result, delivered with confidence.</p>
     <p>The real challenge isn't converting one clean equation. It's getting an entire source‑less book right, at a standard where near‑miss fails, and being able to <strong>prove</strong> it. That's what this exemplar demonstrates.</p>
-  </section>
-
-  <section>
-    <h2>What the exemplar proves</h2>
-    <div class="stats">
-      <div class="stat"><b>0</b><span>extractable characters in the source — a genuine image‑only PDF</span></div>
-      <div class="stat"><b>100%</b><span>fidelity: 30/30 equations character‑exact vs. the author's LaTeX</span></div>
-      <div class="stat"><b>0</b><span>WCAG&nbsp;2.1&nbsp;AA violations (axe); contrast measured, all pass</span></div>
-      <div class="stat"><b>109</b><span>expressions rendered as real MathML — spoken &amp; explorable</span></div>
-      <div class="stat"><b>Signed</b><span>named author fidelity review &amp; sign‑off</span></div>
-    </div>
   </section>
 
   <section>
     <h2>Hear the math</h2>
     <div class="audio">
       <audio controls preload="none" src="equations-read-aloud.mp3">Your browser doesn't support audio playback.</audio>
-      <p class="note"><strong>Audio rendering</strong> — the equations read aloud in a screen‑reader‑style voice (neural TTS), so you can hear what the accessible math sounds like. This is an illustrative narration, <em>not</em> a live screen‑reader capture.</p>
+      <p class="note"><strong>Audio rendering.</strong> The equations read aloud in a screen‑reader‑style voice (neural TTS), so you can hear what the accessible math sounds like. This is an illustrative narration, <em>not</em> a live screen‑reader capture.</p>
     </div>
     <div class="pending" style="margin-top:1rem">
-      <strong>Coming:</strong> a live recording of a blind screen‑reader user reading the edition and exploring an equation term by term — the strongest proof of real‑world accessibility, validated by a native screen‑reader user.
+      <strong>Coming:</strong> a live recording of a blind screen‑reader user reading the edition and exploring an equation term by term, the strongest proof of real‑world accessibility, validated by a native screen‑reader user.
+    </div>
+  </section>
+
+  <section>
+    <h2>What the exemplar proves</h2>
+    <p class="honest" style="max-width:72ch;margin:0 0 1.2rem">This isn't a demo or a claim. Every number below is documented in a signed QA record, open for anyone to review.</p>
+    <div class="stats">
+      <div class="stat"><b>0</b><span>extractable characters in the source, a genuine image‑only PDF</span></div>
+      <div class="stat"><b>100%</b><span>fidelity: 30/30 equations character‑exact against the author's LaTeX. Not 29/30, not "close enough"</span></div>
+      <div class="stat"><b>0</b><span>WCAG&nbsp;2.1&nbsp;AA violations (axe); contrast measured, all pass</span></div>
+      <div class="stat"><b>109</b><span>expressions rendered as real MathML, spoken and explorable</span></div>
+      <div class="stat"><b>Author‑verified</b><span>the original author reviewed and signed off on every equation</span></div>
     </div>
   </section>
 
   <section>
     <h2>How it was made</h2>
     <ul class="clean">
-      <li><strong>From the image‑only PDF, not the source.</strong> The pages were rasterized to images (no text layer) and the mathematics transcribed from those images into real MathML — the same source‑less path a real scanned client text requires.</li>
+      <li><strong>From the image‑only PDF, not the source.</strong> The pages were rasterized to images (no text layer) and the mathematics transcribed from those images into real MathML, the same source‑less path a real scanned client text requires.</li>
       <li><strong>Verified against ground truth.</strong> The image‑derived transcription was then checked against the author's original LaTeX and matched 100%, character‑for‑character.</li>
       <li><strong>Documented, human‑reviewed, gated.</strong> Every step produces a checkable output; ambiguities were surfaced for the author, not silently guessed; the author signed off. It is not a black box.</li>
       <li><strong>Spoken by real assistive tech.</strong> The math is real MathML rendered with MathJax and a speech engine, so NVDA&nbsp;+&nbsp;MathCAT (Windows) and VoiceOver (macOS) read and navigate every equation.</li>
