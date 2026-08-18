@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VeriQAI — Capabilities: accessible STEM conversion</title>
+<meta name="description" content="What VeriQAI does, how each deliverable is verified, what it costs, and what it explicitly does not promise. Accessible STEM conversion to HTML + MathML for disability and alternate-media offices.">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+  :root{
+    --ink:#16202b; --muted:#54606b; --bg:#ffffff; --panel:#f6f8fa; --rule:#e2e8ee;
+    --accent:#0b5cad; --accent-ink:#08386b; --maxw:52rem;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;color:var(--ink);background:var(--bg);
+    font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.55;font-size:16px}
+  a{color:var(--accent)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:2rem 1.25rem 3rem}
+  .brandbar{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;
+    border-bottom:2px solid var(--accent);padding-bottom:.7rem;margin-bottom:1.4rem;flex-wrap:wrap}
+  .brand-text{font-weight:800;letter-spacing:-.01em;font-size:1.3rem;line-height:1.1}
+  .brand-text span{color:var(--accent)}
+  .brand-text small{display:block;font-weight:500;font-size:.68rem;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--muted);margin-top:.15rem}
+  .doctype{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  h1{font-size:1.55rem;line-height:1.2;letter-spacing:-.02em;margin:0 0 .6rem}
+  h2{font-size:1.05rem;letter-spacing:.02em;text-transform:uppercase;color:var(--accent-ink);
+    margin:1.6rem 0 .5rem;padding-bottom:.25rem;border-bottom:1px solid var(--rule)}
+  p{margin:.5rem 0}
+  .lede{font-size:1.05rem;color:var(--muted);margin:0 0 .4rem}
+  ul{padding-left:1.15rem;margin:.4rem 0}
+  li{margin:.3rem 0}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1.6rem}
+  .panel{background:var(--panel);border:1px solid var(--rule);border-radius:9px;padding:.9rem 1.1rem;margin:.6rem 0}
+  .panel h2{margin-top:0;border-bottom:0;padding-bottom:0}
+  table{border-collapse:collapse;width:100%;font-size:.94rem;margin:.5rem 0}
+  th,td{text-align:left;vertical-align:top;padding:.35rem .6rem .35rem 0;border-bottom:1px solid var(--rule)}
+  th{color:var(--accent-ink);white-space:nowrap;width:11rem}
+  .muted{color:var(--muted)}
+  .small{font-size:.9rem}
+  footer{margin-top:1.8rem;padding-top:.8rem;border-top:1px solid var(--rule);font-size:.88rem;color:var(--muted)}
+  @media(max-width:640px){ .grid{grid-template-columns:1fr} }
+  @media print{
+    body{font-size:10pt;line-height:1.42}
+    .wrap{max-width:100%;padding:0}
+    h1{font-size:1.25rem;margin-bottom:.35rem}
+    .lede{font-size:.98rem}
+    h2{margin:.8rem 0 .28rem;font-size:.9rem;padding-bottom:.16rem}
+    p{margin:.28rem 0}
+    ul{margin:.25rem 0}
+    li{margin:.14rem 0}
+    th,td{padding:.2rem .5rem .2rem 0}
+    .panel{break-inside:avoid;padding:.55rem .8rem;margin:.45rem 0}
+    footer{margin-top:.7rem;padding-top:.45rem}
+    a{color:var(--ink);text-decoration:none}
+    @page{margin:1.3cm}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brandbar">
+    <div class="brand-text">Veri<span>QAI</span><small>Accessible STEM, proven</small></div>
+    <div class="doctype">Capabilities · v1.0</div>
+  </div>
+
+  <h1>Equation-dense STEM, made genuinely readable.</h1>
+  <p class="lede">VeriQAI rebuilds scanned, source-less and out-of-print STEM texts as accessible <strong>HTML&nbsp;+&nbsp;MathML</strong> editions, where every equation is real, structured notation a screen reader speaks and a student can explore term by term. Not a picture of an integral.</p>
+
+  <h2>The case we take</h2>
+  <p>The one your pipeline stalls on. A student needs an equation-dense or out-of-print STEM title this term, the publisher has no accessible file, and the usual remediation route cannot help, because <strong>tagging a PDF does not make its mathematics readable</strong>. Standard remediation handles headings, reading order and images. It leaves every equation exactly as unreadable as it found it.</p>
+  <p>We are not a general document-remediation vendor and we are not cheaper than one. We are the call you make when that route has already failed.</p>
+
+  <h2>What you receive</h2>
+  <div class="grid">
+    <ul>
+      <li>Accessible HTML edition, one self-contained file per chapter</li>
+      <li>Mathematics as live MathML, spoken and navigable in NVDA&nbsp;+&nbsp;MathCAT and VoiceOver</li>
+      <li>Figures with extended descriptions in the accessibility layer</li>
+    </ul>
+    <ul>
+      <li>Semantic tables with proper header association</li>
+      <li>Preserved structure: headings, footnotes, equation numbering, cross-references, rebuilt contents</li>
+      <li>A signed QA and provenance record for every chapter</li>
+    </ul>
+  </div>
+
+  <h2>How each chapter is verified</h2>
+  <table>
+    <tbody>
+      <tr><th>Math integrity</th><td>Every expression must parse and render. Failures block the chapter; flagged expressions go to human review.</td></tr>
+      <tr><th>Render gate</th><td>The chapter must build and render cleanly with the mathematics intact end to end.</td></tr>
+      <tr><th>Human fidelity review</th><td>A STEM domain expert checks the rendered chapter against the original scans. <strong>No chapter ships without a named human sign-off.</strong></td></tr>
+      <tr><th>Your acceptance</th><td>You review and formally accept each deliverable before use. This is a required step, not a formality.</td></tr>
+    </tbody>
+  </table>
+  <p class="small muted">Ambiguous notation is surfaced to you, never silently guessed. If you ask how a particular equation was produced and checked, we can tell you. We do not sell autonomous AI conversion and we do not ship a black box.</p>
+
+  <div class="panel">
+    <h2>Proof you can inspect before you commit</h2>
+    <p class="small">A published exemplar: an electromagnetics chapter converted from a genuinely image-only PDF, with <strong>zero</strong> extractable characters in the source, then checked against the author's original LaTeX and matched <strong>character-exact, 30 of 30 expressions</strong>. Zero WCAG&nbsp;2.1&nbsp;AA violations under axe. Author reviewed and signed. The edition, the audio, and the signed QA record are all public at <a href="https://veriqai.ai">veriqai.ai</a>.</p>
+  </div>
+
+  <h2>Getting it to your student</h2>
+  <p>Each chapter is a <strong>single self-contained HTML file</strong>, which means there is nothing to install and no dependency to break. Put it in Canvas or your LMS as a file or page, host it wherever you already host alternate-media, or hand the file to the student directly. It opens in any modern browser and works with NVDA&nbsp;+&nbsp;MathCAT, JAWS and VoiceOver.</p>
+  <p class="small muted">One practical warning from experience: do not send it as an email attachment. Institutional mail gateways routinely quarantine or strip <code>.html</code> attachments, so the student may never receive it. Post it or link it instead. If your workflow needs a different container, EPUB&nbsp;3 with MathML for example, say so at intake and we will scope it.</p>
+
+  <h2>What it costs</h2>
+  <p><strong>A fixed fee per deliverable</strong>, quoted from the actual material once we have seen it, so you get a single number to put in a requisition rather than an hourly meter. Equation density drives the price far more than page count does. Rush turnaround carries a surcharge. <strong>Minimum engagement $750.</strong></p>
+  <p class="small muted">Many offices fund this from alternate-media or accommodation budgets. We are priced well above commodity per-page PDF remediation, deliberately: that market prices the easy half, and the easy half is not what stalled your pipeline.</p>
+
+  <h2>What we do not promise</h2>
+  <ul>
+    <li><strong>We do not guarantee compliance.</strong> We provide remediation toward WCAG&nbsp;2.1&nbsp;AA accessibility practices via the documented process above. Final accessibility also depends on your LMS, hosting, surrounding page elements and assistive-technology versions, which is why your acceptance step exists.</li>
+    <li><strong>We do not promise always-on turnaround.</strong> VeriQAI is a one-person practice by design. Commitments are honest windows with stated capacity limits, and you will hear that a date is not possible rather than watch it be missed.</li>
+    <li><strong>We work under your rights basis.</strong> Conversions are scoped to accessible copies for print-disabled students under your authorized-entity status (17&nbsp;U.S.C.&nbsp;§121 or equivalent), not general publication.</li>
+  </ul>
+
+  <h2>Start with one chapter</h2>
+  <p>The lowest-risk way to find out whether this works for you is to hand us a single chapter of a title that is currently stuck. You will see the process, the QA record and the result, with nothing else riding on it.</p>
+  <p><strong>Andre Knoesen</strong> · <a href="mailto:andre@veriqai.ai">andre@veriqai.ai</a> · <a href="https://veriqai.ai">veriqai.ai</a><br>
+  <span class="small muted">Every inquiry is read and answered personally, usually within one business day.</span></p>
+
+  <footer>
+    VeriQAI, LLC · Davis, California · Capabilities v1.0. Process detail: <em>Conversion Process &amp; QA v1.0</em>, the documented process referenced in VeriQAI services agreements, available on request.
+  </footer>
+
+</div>
+</body>
+</html>

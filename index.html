@@ -52,6 +52,16 @@
   footer.site{border-top:1px solid var(--rule);color:var(--muted);font-size:.9rem;padding:2rem 0 3rem}
   footer.site .wrap{padding-top:0}
   .honest{font-size:.92rem;color:var(--muted);max-width:70ch}
+  .start{background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:1.5rem 1.5rem 1.3rem}
+  .start h2{margin-top:0}
+  .start .lede{font-size:1.06rem;margin-bottom:1.2rem}
+  .start .email{font-size:1.02rem;margin:.9rem 0 0}
+  .start .email code{background:#fff;border:1px solid var(--rule);border-radius:6px;padding:.15rem .45rem;font-size:.98rem}
+  .checklist{background:#fff;border:1px solid var(--rule);border-radius:9px;padding:.9rem 1.1rem;margin:1.1rem 0 0}
+  .checklist p{margin:0 0 .4rem;font-weight:700;font-size:.95rem}
+  .headlinks{display:flex;align-items:center;gap:1rem}
+  .headlink{font-weight:700;text-decoration:none;color:var(--accent);white-space:nowrap}
+  .headlink:hover{text-decoration:underline}
   @media(max-width:640px){ h1{font-size:1.8rem} .hero{padding:2rem 0 1rem} .cta.secondary{margin-left:0;margin-top:.6rem} }
 </style>
 </head>
@@ -64,7 +74,10 @@
       <img class="mark" src="veriqai-mark.png" alt="VeriQAI logo" width="137" height="120">
       <div class="brand-text">Veri<span>QAI</span><small>Accessible STEM, proven</small></div>
     </div>
-    <a class="cta" href="accessible-edition.html">Open the accessible edition &rarr;</a>
+    <div class="headlinks">
+      <a class="headlink" href="#start">Work with us</a>
+      <a class="cta" href="accessible-edition.html">Open the accessible edition &rarr;</a>
+    </div>
   </div>
 </header>
 
@@ -77,6 +90,7 @@
     <p class="lede">A scanned electromagnetics chapter has its mathematics trapped in images. A screen reader gets noise, not "the complex propagation constant equals omega root mu‑epsilon." Here is the same chapter as a <strong>verified accessible HTML&nbsp;+&nbsp;MathML edition</strong>: the math <strong>spoken and explorable</strong> by a screen reader, built from the image‑only PDF and <strong>author‑verified faithful</strong> to the source, <strong>expression by expression</strong>.</p>
     <a class="cta" href="accessible-edition.html">Open the accessible edition &rarr;</a>
     <a class="cta secondary" href="QA-provenance-one-pager-SIGNED.pdf">See the QA &amp; provenance (signed)</a>
+    <a class="cta secondary" href="capabilities.html">One-page capabilities &rarr;</a>
     <p class="lede" style="font-size:1.02rem;margin-top:1.4rem">This is for the print‑disabled reader in an equation‑dense course who needs the mathematics now: correct, navigable, and read aloud. Not a scanned image, and not a months‑long wait for an accessible edition that may never arrive.</p>
   </section>
 
@@ -86,8 +100,9 @@
   </figure>
 
   <section>
-    <h2>Why this is hard, and why a tool won't do it</h2>
+    <h2>Why this is hard, and why a tool alone won't do it</h2>
     <p>Making equation‑dense STEM accessible isn't a conversion job you can hand to software. General PDF‑remediation tools tag headings and reading order but leave every equation as an image, so the math stays unreadable. Automated math conversion (LaTeXML on clean source, OCR‑to‑MathML on scans) gets most of the way there. Most of the way isn't the bar.</p>
+    <p>Some tools now do emit MathML from images of equations. None of them publishes an accuracy figure, and no independent evaluation of that output exists. In a subject where a flipped sign is invisible to the reader, an unmeasured conversion is not a finished one.</p>
     <p>The newest standard now exists. Embedding real MathML in a tagged PDF (PDF/UA-2, 2024) is fully specified. But the mainstream PDF toolchain, the tools people actually author and check with, does not yet deliver it. Adobe's auto-tagging conveys no math, the mainstream accessibility checkers do not validate math at all (a broken file can still score 100), and the paths that do work are narrow, current-version, and mostly Windows. A capability on paper is not a capability a student can use. (As tested in 2026; we re-check as tools change.)</p>
     <p>In accessibility, <strong>90% correct is a failure</strong>. It means one equation in ten is wrong, and a reader who can't see the original page has no way to catch a dropped subscript or a flipped sign. A plausible‑but‑wrong equation is worse than no equation at all: it's the wrong result, delivered with confidence.</p>
     <p>The real challenge isn't converting one clean equation. It's getting an entire source‑less book right, at a standard where near‑miss fails, and being able to <strong>prove</strong> it. That's what this exemplar demonstrates.</p>
@@ -109,7 +124,7 @@
     <p class="honest" style="max-width:72ch;margin:0 0 1.2rem">This isn't a demo or a claim. Every number below is documented in a signed QA record, open for anyone to review.</p>
     <div class="stats">
       <div class="stat"><b>0</b><span>extractable characters in the source, a genuine image‑only PDF</span></div>
-      <div class="stat"><b>100%</b><span>fidelity: 30/30 equations character‑exact against the author's LaTeX. Not 29/30, not "close enough"</span></div>
+      <div class="stat"><b>30/30</b><span>equations character‑exact against the author's LaTeX. Not 29/30, not "close enough"</span></div>
       <div class="stat"><b>0</b><span>WCAG&nbsp;2.1&nbsp;AA violations (axe); contrast measured, all pass</span></div>
       <div class="stat"><b>109</b><span>expressions rendered as real MathML, spoken and explorable</span></div>
       <div class="stat"><b>Author‑verified</b><span>the original author reviewed and signed off on every equation</span></div>
@@ -120,11 +135,36 @@
     <h2>How it was made</h2>
     <ul class="clean">
       <li><strong>From the image‑only PDF, not the source.</strong> The pages were rasterized to images (no text layer) and the mathematics transcribed from those images into real MathML, the same source‑less path a real scanned client text requires.</li>
-      <li><strong>Verified against ground truth.</strong> The image‑derived transcription was then checked against the author's original LaTeX and matched 100%, character‑for‑character.</li>
+      <li><strong>Verified against ground truth.</strong> The image‑derived transcription was then checked against the author's original LaTeX and matched character‑for‑character, 30 of 30.</li>
       <li><strong>Documented, human‑reviewed, gated.</strong> Every step produces a checkable output; ambiguities were surfaced for the author, not silently guessed; the author signed off. It is not a black box.</li>
       <li><strong>Spoken by real assistive tech.</strong> The math is real MathML rendered with MathJax and a speech engine, so NVDA&nbsp;+&nbsp;MathCAT (Windows) and VoiceOver (macOS) read and navigate every equation.</li>
     </ul>
     <p class="honest">The material is the author's own work, reproduced with permission and freely shareable. This edition describes a documented, human‑reviewed conversion process and makes no compliance guarantee.</p>
+  </section>
+
+  <section id="start">
+    <div class="start">
+      <h2>Stuck on a STEM title?</h2>
+      <p class="lede">If your pipeline has stalled on an equation‑dense or out‑of‑print STEM book, tell me about it. I will tell you what is involved, what it would cost, and how fast it can come back. If I am not the right answer, I will say so and point you somewhere better.</p>
+
+      <a class="cta" href="mailto:andre@veriqai.ai?subject=STEM%20title%20our%20alt-media%20pipeline%20is%20stuck%20on&amp;body=Hi%20Andre%2C%0A%0AWe%20have%20an%20equation-dense%20STEM%20title%20we%27re%20having%20trouble%20getting%20into%20accessible%20form.%20Details%20below.%0A%0AInstitution%3A%0ACourse%20and%20term%3A%0ATitle%2C%20author%2C%20edition%3A%0AChapters%20or%20approximate%20page%20count%3A%0AStudent%20needs%20it%20by%3A%0AWhat%20we%27ve%20already%20tried%3A%0A%0AThanks%2C%0A">Describe the title &rarr;</a>
+
+      <p class="email">Or email <code>andre@veriqai.ai</code> directly.</p>
+
+      <div class="checklist">
+        <p>Six things that let me answer properly the first time:</p>
+        <ul class="clean">
+          <li>Your institution</li>
+          <li>The course and term</li>
+          <li>Title, author, edition</li>
+          <li>Chapters, or an approximate page count</li>
+          <li>When the student needs it</li>
+          <li>What you have already tried</li>
+        </ul>
+      </div>
+
+      <p class="honest" style="margin-top:1.2rem">Every inquiry is read and answered by me personally, usually within one business day. VeriQAI is a one‑person practice by design, so I work in honest capacity windows rather than promising always‑on turnaround. If your deadline is not one I can meet, you will hear that immediately, not after a week of silence.</p>
+    </div>
   </section>
 
 </div>
@@ -132,6 +172,7 @@
 
 <footer class="site">
   <div class="wrap">
+    <p><a href="#start">Work with us</a> · <a href="mailto:andre@veriqai.ai">andre@veriqai.ai</a></p>
     <p>VeriQAI · EM Reader accessible‑edition exemplar. Source: <em>Fundamentals of Electromagnetic Waves</em>, §2.6.4–2.6.5, by Andre Knoesen, reproduced by the author.</p>
   </div>
 </footer>
